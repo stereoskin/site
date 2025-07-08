@@ -1,65 +1,118 @@
-<!-- In HEAD -->
-<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STEREO</title>
+  
+  <!-- Font & Brevo styles -->
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 
-<style>
-  /* MINIMAL black & white overrides */
-  #newsletter-section {
-    max-width: 540px;
-    margin: 2rem auto;
-    text-align: center;
-    font-family: Helvetica, Arial, sans-serif;
-    color: #000;
-    background-color: #fff;
-    padding: 2rem;
-    border: 1px solid #000;
-    border-radius: 8px;
-  }
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Helvetica, Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
 
-  #newsletter-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
 
-  #newsletter-section p {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
+    header img {
+      max-width: 300px;
+      height: auto;
+    }
 
-  #sib-form input {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    margin-bottom: 1rem;
-    border: 1px solid #000;
-    border-radius: 4px;
-    font-size: 1rem;
-    color: #000;
-    background-color: #fff;
-  }
+    #newsletter-section {
+      max-width: 540px;
+      margin: 2rem auto;
+      text-align: center;
+      background-color: #fff;
+      border: 1px solid #000;
+      border-radius: 8px;
+      padding: 2rem;
+    }
 
-  #sib-form button {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
+    #newsletter-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
 
-  #sib-form button:hover {
-    background-color: #333;
-  }
+    #newsletter-section p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
 
-  #sib-form .sib-form-message-panel {
-    font-size: 0.95rem;
-    text-align: center;
-    margin-top: 1rem;
-  }
+    #sib-form input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #000;
+      border-radius: 4px;
+      font-size: 1rem;
+      color: #000;
+      background-color: #fff;
+    }
 
-  #sib-form .sib-form-message-panel__inner-text {
-    color: #000;
-  }
-</style>
+    #sib-form button {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      font-weight: bold;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #sib-form button:hover {
+      background-color: #333;
+    }
+
+    #sib-form .sib-form-message-panel {
+      font-size: 0.95rem;
+      text-align: center;
+      margin-top: 1rem;
+      border-radius: 4px;
+      padding: 0.75rem 1rem;
+      border: 1px solid #000;
+      background-color: #f9f9f9;
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="./STEREO_logo.svg" alt="STEREO Logo">
+  </header>
+
+  <section id="newsletter-section">
+    <h2>Iscriviti alla nostra Newsletter</h2>
+    <p>Ricevi aggiornamenti esclusivi. Iscriviti ora!</p>
+    
+    <div id="sib-container" class="sib-container--large sib-container--vertical">
+      <form id="sib-form" method="POST" action="https://bc3bbc2a.sibforms.com/serve/MUIFAIuASvgBuRI_xKcg4Xwwtvj_2HCCKQ0vjLj2e6fgzHaq-9-AgVIWdFHPCdsabbNjowX3tfMYfZDOL2j_mhAEQ1VAK0PBW4IAeysDUfaJTT_hais1jUEOU6HCAIcUdbD10XB_AsF5L1erUKKMnuVHLvxKdO5sjUCb2L-siId4M0HuHAsYAnKSbFV7OBuHUsjicacFEEjOpKrZ" data-type="subscription">
+        <input type="email" id="EMAIL" name="EMAIL" placeholder="La tua email" required />
+
+        <button type="submit">ISCRIVITI</button>
+
+        <div id="error-message" class="sib-form-message-panel" style="display:none;">
+          <span class="sib-form-message-panel__inner-text">La tua iscrizione non può essere convalidata.</span>
+        </div>
+        <div id="success-message" class="sib-form-message-panel" style="display:none;">
+          <span class="sib-form-message-panel__inner-text">La tua iscrizione è avvenuta correttamente.</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+</body>
+</html>
