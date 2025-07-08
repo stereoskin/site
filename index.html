@@ -5,27 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>STEREO</title>
   <style>
-    body {
+    html, body {
       margin: 0;
-      height: 100vh;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
       display: flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(270deg, #1b2735, #090a0f, #1b2735);
-      background-size: 600% 600%;
-      animation: gradient 16s ease infinite;
+      background: radial-gradient(circle at 50% 50%, #ff6ec4, #7873f5, #4ade80, #06b6d4);
+      background-size: 400% 400%;
+      animation: swirl 30s ease infinite;
     }
 
-    @keyframes gradient {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
+    @keyframes swirl {
+      0% {
+        background-position: 0% 50%;
+      }
+      25% {
+        background-position: 50% 0%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      75% {
+        background-position: 50% 100%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
     }
 
     img {
       max-width: 300px;
       height: auto;
-      filter: drop-shadow(0 0 20px rgba(0,0,0,0.7));
     }
   </style>
 </head>
